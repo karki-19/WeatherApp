@@ -3,7 +3,7 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const img = document.querySelector(".time");
 const icon = document.querySelector(".icon img");
-const body = document.querySelector('.container');
+const container = document.querySelector('.container');
 
 let check = localStorage.getItem("city");
 
@@ -60,11 +60,11 @@ const updateUI = (data) => {
   // update the image here
   if(weatherdata.IsDayTime){
     img.setAttribute('src','img/day.svg')
-    body.style.backgroudColor = 'beige'
+    document.body.style.backgroundColor = 'beige'
   }
   else{
       img.setAttribute('src','img/night.svg')
-      body.style.backgroudColor = 'black'
+      document.body.style.backgroundColor = 'black'
   }
 //   will use the ternary operator this time
 
